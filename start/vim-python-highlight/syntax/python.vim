@@ -87,7 +87,7 @@ syn keyword pythonStatement	False None True
 syn keyword pythonStatement	as assert break continue del global pass
 syn keyword pythonStatement	lambda nonlocal pass return with yield
 syn keyword pythonStatement	class def nextgroup=pythonFunction skipwhite
-syn keyword pythonConditional	elif else if
+syn keyword pythonConditional	elif else if match case
 syn keyword pythonRepeat	for while
 syn keyword pythonOperator	and in is not or
 syn keyword pythonException	except finally raise try
@@ -131,10 +131,10 @@ syn match   pythonMatrixMultiply
 "Github : <https://github.com/NelsonTLima>
 "Email : <nelsontlima@gmail.com>
 
-syn match   pythonIdentifier	"[A-Za-z_]*"
+syn match   pythonIdentifier	"[A-Za-z_]\w*"
 
 syn match   pythonFunction	"\h\w*" display contained
-syn match   pythonFunction	"\w*\ze(.*)"
+syn match   pythonFunction	"[A-Za-z_]\w*\ze(.*)"
 
 
 syn match   pythonComment	"#.*$" contains=pythonTodo,@Spell
