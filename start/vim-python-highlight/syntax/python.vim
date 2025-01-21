@@ -126,7 +126,7 @@ syn match   pythonMatrixMultiply
       \ contains=ALLBUT,pythonDecoratorName,pythonDecorator,pythonFunction,pythonDoctestValue
       \ transparent
 
-"Identifier  match and the second function match added by NelsonTLima.
+"Identifier match and the second function match added by NelsonTLima.
 "2023 Apr 01
 "Github : <https://github.com/NelsonTLima>
 "Email : <nelsontlima@gmail.com>
@@ -134,8 +134,8 @@ syn match   pythonMatrixMultiply
 syn match   pythonIdentifier	"[A-Za-z_]\w*"
 
 syn match   pythonFunction	"\h\w*" display contained
-syn match   pythonFunction	"[A-Za-z_]\w*\ze(.*)"
 
+syn match   pythonFunction "\<[A-Za-z_]\w*\ze(\_.*)"
 
 syn match   pythonComment	"#.*$" contains=pythonTodo,@Spell
 syn keyword pythonTodo		FIXME NOTE NOTES TODO XXX contained
